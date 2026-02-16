@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
 <body>
     <nav class="nav-bar">
-        <img src="logo.png" alt="Logo">
+        <h2 class="logo">Eli@keys</h2>
         <ul>
             <li class="links"><a href="index.html" class="anchor-links">Home</a></li>
             <li class="links"><a href="about.html" class="anchor-links">About</a></li>
@@ -17,9 +20,77 @@
         </ul>
     </nav>
     <header class="header">
-
+        <div class="descriptio-box">
+            <div>
+            <h3 class="career">Web/ AI Developer</h3>
+            <p class="introduction-para">Hi I'm <span>Eliel</span> From the <span>United States</span></p>
+            </div>
+            <figure class="image-">
+                <img src="profile.jpg" alt="Profile Picture">
+            </figure>
+        </div>
     </header>
-    <h1>Welcome to My Portfolio</h1>
+    <main class="main-container">
+        <section id="about">
+            <figure>
+                <img src="profile.jpg" alt="Profile Picture">
+                <figcaption>Eliel's Profile Picture</figcaption>
+            </figure>
+            <h2 class="about-me">About Me</h2>
+            <p>I am a passionate web and AI developer with expertise in creating innovative digital solutions. My journey in technology began with a curiosity about how things work, and it has evolved into a career dedicated to building impactful applications.</p>
+
+        </section>
+        <section id="my-work">
+            <img src="project1.jpg" alt="Project 1">
+            <img src="project2.jpg" alt="Project 2">
+            <img src="project3.jpg" alt="Project 3">
+        </section>
+
+        <section id="my-services">
+            <div class="services-offered">
+                <figure>
+                    <img src="service1.jpg" alt="Service 1">
+                </figure>
+                <h2 class="title">UIX/UI Design</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sed in possimus molestiae molestias beatae!</p>
+                <a href="services.html" class="learn-more">Learn More</a>
+            </div>
+                        <div class="services-offered">
+                <figure>
+                    <img src="service1.jpg" alt="Service 1">
+                </figure>
+                <h2 class="title">AI Development</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sed in possimus molestiae molestias beatae!</p>
+                <a href="services.html" class="learn-more">Learn More</a>
+            </div>
+                        <div class="services-offered">
+                <figure>
+                    <img src="service1.jpg" alt="Service 1">
+                </figure>
+                <h2 class="title">Web Design</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sed in possimus molestiae molestias beatae!</p>
+                <a href="services.html" class="learn-more">Learn More</a>
+            </div>
+        </section>
+        <section id="contact-container">
+            <h2 class="contact-detail">Contact Me</h2>
+            <form action="" class="contact-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter email">
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter message"></textarea>
+
+            </form>
+        </section>
+    </main>
+    
     
 </body>
 </html>
