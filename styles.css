@@ -66,6 +66,37 @@ body {
     gap: 30px;
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 .links {
     color: var(--accent-color);
     text-decoration: none;
@@ -99,6 +130,28 @@ body {
     width: 100%;
 }
 
+/* Tooltip for Desktop Navbar */
+.navbar-links .links::before {
+    content: attr(data-info);
+    position: absolute;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: -45px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translateY(-5px);
+}
+
+.navbar-links .links:hover::before {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
 /* SIDEBAR STYLES */
 .sidebar-container {
     position: fixed;
@@ -111,6 +164,12 @@ body {
     z-index: 1000;
     border-left: 1px solid rgba(129, 81, 241, 0.2);
     box-shadow: var(--shadow);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-container.active {
+    transform: translateX(0);
 }
 
 .sidebar {
@@ -119,6 +178,34 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: none;
+    z-index: 1001;
+}
+
+.close-sidebar:hover {
+    color: var(--secondary-accent-color);
+    transform: rotate(90deg);
+}
+
+.sidebar .links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: var(--transition);
 }
 
 /* MAIN CONTAINER */
@@ -509,7 +596,11 @@ footer p {
     }
 
     .navbar-links {
-        gap: 15px;
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
     }
 
     .links {
@@ -607,6 +698,21 @@ footer p {
 
     .footer-links {
         gap: 15px;
+    }
+
+    .sidebar-container {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .close-sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar {
+        padding: 80px 20px 20px;
     }
 }
 

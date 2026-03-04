@@ -14,18 +14,26 @@
 <nav class="navbar-container">
      <h2 class="logo">Eliel@keys</h2>
     <ul class="navbar-links">
-        <li class="links-item"><a href="#home-section" class="links"><i class="fa-solid fa-house"></i></a></li>
-        <li class="links-item"><a href="#about" class="links"><i class="fa-solid fa-info-circle"></i></a></li>
-        <li class="links-item"><a href="#contact-container" class="links"> <i class="fa-solid fa-user"></i></a></li>
-        <li class="links-item"><a href="#projects" class="links"> <i class="fa-solid fa-briefcase"></i></a></li>
-    </ul>
-</nav>
-<aside class="sidebar-container" style="display: none;">
-     <ul class="sidebar">
         <li class="links-item"><a data-info="Home" href="#home-section" class="links"><i class="fa-solid fa-house"></i></a></li>
         <li class="links-item"><a data-info="About" href="#about" class="links"><i class="fa-solid fa-info-circle"></i></a></li>
         <li class="links-item"><a data-info="Contact" href="#contact-container" class="links"> <i class="fa-solid fa-user"></i></a></li>
-         <li class="links-item"><a data-info="Projects" href="#projects" class="links"> <i class="fa-solid fa-briefcase"></i></a></li>
+        <li class="links-item"><a data-info="Projects" href="#projects" class="links"> <i class="fa-solid fa-briefcase"></i></a></li>
+    </ul>
+    <button class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+<aside class="sidebar-container" id="sidebar">
+    <button class="close-sidebar" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+     <ul class="sidebar">
+        <li class="links-item"><a data-info="Home" href="#home-section" class="links"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="links-item"><a data-info="About" href="#about" class="links"><i class="fa-solid fa-info-circle"></i> About</a></li>
+        <li class="links-item"><a data-info="Contact" href="#contact-container" class="links"> <i class="fa-solid fa-user"></i> Contact</a></li>
+         <li class="links-item"><a data-info="Projects" href="#projects" class="links"> <i class="fa-solid fa-briefcase"></i> Projects</a></li>
     </ul>
 </aside>
 
