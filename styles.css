@@ -1,4 +1,11 @@
 :root{
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+    --accent-color: #8151f1;
+    --secondary-accent-color: #6035C3;
+
+    --shadow-color: #6D3CDEBC;
+    --shadow: 1px 4px 20px var((var(--shadow-color)));
 }
 
 *{
@@ -8,11 +15,13 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /*background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);*/
+    background-color: var(--primary-color);
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
     min-height: 100dvh;
+    padding-top: 100px;
 }
 .navbar-container {
     display: flex;
@@ -26,6 +35,7 @@ body {
     border-radius: 15px;
     background: rgba(15, 32, 39, 0.85);
     backdrop-filter: blur(20px);
+    margin: 12px;
 }
 .logo {
     font-size: 24px;
@@ -39,7 +49,7 @@ body {
     gap: 20px;
 }
 .links{
-    color: #ffffff;
+    color: var(--accent-color);
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
@@ -47,7 +57,7 @@ body {
     position: relative;
 }
 .links:hover {
-    color: #1abc9c;
+    color: var(--secondary-accent-color);
 }
 .links::before {
     content: attr(data-info);
@@ -87,5 +97,12 @@ body {
     z-index: 1000;
 
 }
+
+.main-container {
+    padding: 120px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 
